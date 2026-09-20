@@ -22,6 +22,7 @@ function Navbar() {
         <Link to="/cart">Cart ({totalItems})</Link>
         {user ? (
           <>
+                      <Link to="/orders">My Orders</Link>
             <span className="nav-user">Hi, {user.name}</span>
             <button className="nav-logout" onClick={handleLogout}>
               Logout

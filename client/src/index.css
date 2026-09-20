@@ -216,3 +216,57 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
+.order-card {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.order-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.order-item {
+  margin: 4px 0;
+}
+
+.order-total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.status {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  text-transform: capitalize;
+  background: #eee;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #8a6d00;
+}
+
+.status-processing,
+.status-shipped {
+  background: #d6e9ff;
+  color: #0b5394;
+}
+
+.status-delivered {
+  background: #d4edda;
+  color: #1b7f3b;
+}
+
+.status-cancelled {
+  background: #f8d7da;
+  color: #c0392b;
+}
