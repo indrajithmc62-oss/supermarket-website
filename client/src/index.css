@@ -36,3 +36,60 @@ body {
   margin: 0 auto;
   padding: 24px;
 }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.product-icon {
+  font-size: 48px;
+}
+
+.product-card h3 {
+  margin: 8px 0 4px;
+}
+
+.product-desc {
+  font-size: 13px;
+  color: #666;
+  min-height: 34px;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #1b7f3b;
+}
+
+.product-price span {
+  font-weight: normal;
+  color: #666;
+  font-size: 13px;
+}
+
+.add-btn {
+  background: #1b7f3b;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.add-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #c0392b;
+}
