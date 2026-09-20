@@ -53,10 +53,15 @@ function Cart() {
 
       <div className="cart-total">
         <h2>Total: ₹{totalPrice}</h2>
-        <button className="clear-btn" onClick={clearCart}>
-          Clear cart
-        </button>
-      </div>
+        <div>
+          <button className="clear-btn" onClick={clearCart}>
+            Clear cart
+          </button>{" "}
+          <Link to="/checkout" className="link-btn">
+            Checkout
+          </Link>
+        </div>
+      </div> 
     </div>
   );
 }
