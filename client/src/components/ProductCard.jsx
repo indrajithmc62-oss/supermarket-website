@@ -1,3 +1,5 @@
+import { useCart } from "../context/CartContext";
+
 const icons = {
   Fruits: "🍎",
   Vegetables: "🥕",
@@ -9,6 +11,8 @@ const icons = {
 };
 
 function ProductCard({ product }) {
+  const { addToCart } = useCart();
+
   return (
     <div className="product-card">
       <div className="product-icon">{icons[product.category] || "🛍️"}</div>
@@ -17,7 +21,11 @@ function ProductCard({ product }) {
       <p className="product-price">
         ₹{product.price} <span>/ {product.unit}</span>
       </p>
-      <button className="add-btn" disabled={product.stock === 0}>
+      <button
+        className="add-btn"
+        disabled={product.stock === 0}
+        onClick={() => addToCart(product)}
+      >
         {product.stock === 0 ? "Out of stock" : "Add to cart"}
       </button>
     </div>
