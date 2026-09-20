@@ -167,3 +167,52 @@ body {
   border-radius: 6px;
   text-decoration: none;
 }
+.auth-box {
+  max-width: 380px;
+  margin: 30px auto;
+  background: white;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-box input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.switch-text {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.text-btn {
+  background: none;
+  border: none;
+  color: #1b7f3b;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.nav-user {
+  color: white;
+}
+
+.nav-logout {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
