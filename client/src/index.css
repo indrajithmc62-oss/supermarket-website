@@ -270,3 +270,54 @@ body {
   background: #f8d7da;
   color: #c0392b;
 }
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  padding: 8px 18px;
+  border: 1px solid #1b7f3b;
+  background: white;
+  color: #1b7f3b;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #1b7f3b;
+  color: white;
+}
+
+.admin-form {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+}
+
+.admin-form h3 {
+  margin: 0;
+}
+
+.admin-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.success {
+  color: #1b7f3b;
+}
+
+.order-head select {
+  padding: 4px 8px;
+  border-radius: 6px;
+}

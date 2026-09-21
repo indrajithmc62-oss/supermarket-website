@@ -23,6 +23,7 @@ function Navbar() {
         {user ? (
           <>
                       <Link to="/orders">My Orders</Link>
+                                  {user.role === "admin" && <Link to="/admin">Admin</Link>}
             <span className="nav-user">Hi, {user.name}</span>
             <button className="nav-logout" onClick={handleLogout}>
               Logout
