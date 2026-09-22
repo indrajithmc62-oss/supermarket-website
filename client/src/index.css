@@ -342,7 +342,6 @@ body {
     justify-content: center;
     gap: 14px;
   }
-
   .container {
     padding: 16px;
   }
@@ -351,5 +350,149 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: linear-gradient(135deg, #1b7f3b, #56c271);
+  color: white;
+  border-radius: 16px;
+  padding: 40px 44px;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+}
+
+.hero p {
+  font-size: 17px;
+  opacity: 0.95;
+  margin: 0 0 20px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: white;
+  color: #1b7f3b;
+  font-weight: bold;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  background: #fff3cd;
+}
+
+.hero-art {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  font-size: 54px;
+}
+
+.hero-art span {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 12px 18px;
+  text-align: center;
+}
+
+.section-title {
+  margin: 0 0 14px;
+}
+
+.chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.chip {
+  background: white;
+  border: 1px solid #d6d6d6;
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: #1b7f3b;
+}
+
+.chip.active {
+  background: #1b7f3b;
+  border-color: #1b7f3b;
+  color: white;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.search {
+  flex: 1;
+  min-width: 200px;
+  padding: 11px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.toolbar select {
+  padding: 11px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  background: white;
+}
+
+.result-count {
+  color: #666;
+  font-size: 14px;
+}
+
+.notice {
+  color: #666;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero-art {
+    font-size: 36px;
   }
 }
