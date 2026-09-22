@@ -117,6 +117,29 @@ function Home() {
           </>
         )}
       </section>
+      
+      <section className="perks">
+        <div className="perk">
+          <span>🚚</span>
+          <h4>Fast delivery</h4>
+          <p>Ordered today, delivered same day in most areas.</p>
+        </div>
+        <div className="perk">
+          <span>💵</span>
+          <h4>Cash on delivery</h4>
+          <p>No card needed. Pay when your order arrives.</p>
+        </div>
+        <div className="perk">
+          <span>🥦</span>
+          <h4>Fresh quality</h4>
+          <p>Fruits and vegetables sourced fresh every day.</p>
+        </div>
+        <div className="perk">
+          <span>🔒</span>
+          <h4>Secure checkout</h4>
+          <p>Your account and orders are protected.</p>
+        </div>
+      </section>
     </div>
   );
 }

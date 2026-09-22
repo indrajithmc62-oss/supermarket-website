@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Checkout from "./pages/Checkout";
 import MyOrders from "./pages/MyOrders";
 import Admin from "./pages/Admin";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 }
