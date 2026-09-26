@@ -121,13 +121,13 @@ function Home() {
         )}
         {error && <p className="error">{error}</p>}
 
-        {!loading && !error && (
+                {!loading && !error && (
           <>
-            <p className="result-count">{visible.length} products</p>
+            <p className="text-sm text-gray-500 mb-3">{visible.length} products</p>
             {visible.length === 0 ? (
-              <p className="notice">No products match your search.</p>
+              <p className="text-gray-500">No products match your search.</p>
             ) : (
-              <div className="product-grid">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
                 {visible.map((p) => (
                   <ProductCard key={p._id} product={p} />
                 ))}
@@ -136,27 +136,27 @@ function Home() {
           </>
         )}
       </section>
-      
-      <section className="perks">
-        <div className="perk">
-          <span>🚚</span>
-          <h4>Fast delivery</h4>
-          <p>Ordered today, delivered same day in most areas.</p>
+
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-10">
+        <div className="bg-white rounded-xl p-5 text-center shadow-sm">
+          <span className="text-3xl">🚚</span>
+          <h4 className="font-semibold mt-2 mb-1">Fast delivery</h4>
+          <p className="text-sm text-gray-500">Ordered today, delivered same day in most areas.</p>
         </div>
-        <div className="perk">
-          <span>💵</span>
-          <h4>Cash on delivery</h4>
-          <p>No card needed. Pay when your order arrives.</p>
+        <div className="bg-white rounded-xl p-5 text-center shadow-sm">
+          <span className="text-3xl">💵</span>
+          <h4 className="font-semibold mt-2 mb-1">Cash on delivery</h4>
+          <p className="text-sm text-gray-500">No card needed. Pay when your order arrives.</p>
         </div>
-        <div className="perk">
-          <span>🥦</span>
-          <h4>Fresh quality</h4>
-          <p>Fruits and vegetables sourced fresh every day.</p>
+        <div className="bg-white rounded-xl p-5 text-center shadow-sm">
+          <span className="text-3xl">🥦</span>
+          <h4 className="font-semibold mt-2 mb-1">Fresh quality</h4>
+          <p className="text-sm text-gray-500">Fruits and vegetables sourced fresh every day.</p>
         </div>
-        <div className="perk">
-          <span>🔒</span>
-          <h4>Secure checkout</h4>
-          <p>Your account and orders are protected.</p>
+        <div className="bg-white rounded-xl p-5 text-center shadow-sm">
+          <span className="text-3xl">🔒</span>
+          <h4 className="font-semibold mt-2 mb-1">Secure checkout</h4>
+          <p className="text-sm text-gray-500">Your account and orders are protected.</p>
         </div>
       </section>
     </div>
