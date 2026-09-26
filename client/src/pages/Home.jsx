@@ -76,13 +76,17 @@ function Home() {
         </div>
       </section>
 
-      <section id="shop">
-        <h2 className="section-title">Shop by category</h2>
-        <div className="chips">
+            <section id="shop">
+        <h2 className="text-2xl font-bold mb-4">Shop by category</h2>
+        <div className="flex flex-wrap gap-2 mb-5">
           {categories.map((c) => (
             <button
               key={c.name}
-              className={category === c.name ? "chip active" : "chip"}
+              className={
+                category === c.name
+                  ? "flex items-center gap-1.5 bg-emerald-600 border border-emerald-600 text-white rounded-full px-4 py-2 text-sm"
+                  : "flex items-center gap-1.5 bg-white border border-gray-300 text-gray-700 rounded-full px-4 py-2 text-sm hover:border-emerald-600"
+              }
               onClick={() => setCategory(c.name)}
             >
               <span>{c.icon}</span> {c.name}
@@ -90,15 +94,19 @@ function Home() {
           ))}
         </div>
 
-        <div className="toolbar">
+        <div className="flex flex-wrap gap-3 mb-2">
           <input
-            className="search"
+            className="flex-1 min-w-[200px] border border-gray-300 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
             type="text"
             placeholder="Search products..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <select value={sort} onChange={(e) => setSort(e.target.value)}>
+          <select
+            className="border border-gray-300 rounded-xl px-3 py-2.5 text-sm bg-white"
+            value={sort}
+            onChange={(e) => setSort(e.target.value)}
+          >
             <option value="default">Sort: Newest</option>
             <option value="low">Price: Low to high</option>
             <option value="high">Price: High to low</option>
