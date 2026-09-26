@@ -45,23 +45,34 @@ function Home() {
 
   return (
     <div>
-      <section className="hero">
-        <div className="hero-text">
-          <span className="hero-tag">Fresh • Fast • Affordable</span>
-          <h1>Fresh groceries, delivered to your door</h1>
-          <p>
+
+    <section className="flex flex-col md:flex-row items-center justify-between gap-8 rounded-2xl bg-gradient-to-br from-emerald-600 to-emerald-400 text-white px-8 py-10 md:px-12 md:py-14 mb-8 overflow-hidden">
+        <div className="max-w-xl text-center md:text-left">
+          <span className="inline-block bg-white/20 text-sm px-3 py-1 rounded-full mb-3">
+            Fresh • Fast • Affordable
+          </span>
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-3">
+            Fresh groceries, delivered to your door
+          </h1>
+          <p className="text-base md:text-lg text-white/90 mb-5">
             Fruits, vegetables, dairy and daily essentials, all in one place.
             Pay when it arrives.
           </p>
-          <a href="#shop" className="hero-btn">
+          
+            <a href="#shop"
+            className="inline-block bg-white text-emerald-700 font-bold px-6 py-3 rounded-full hover:bg-amber-100 transition-colors"
+          >
             Shop now
           </a>
         </div>
-        <div className="hero-art" aria-hidden="true">
-          <span>🍎</span>
-          <span>🥕</span>
-          <span>🥛</span>
-          <span>🍞</span>
+        <div
+          className="grid grid-cols-2 gap-3 text-5xl"
+          aria-hidden="true"
+        >
+          <span className="bg-white/20 rounded-2xl px-5 py-3 text-center">🍎</span>
+          <span className="bg-white/20 rounded-2xl px-5 py-3 text-center">🥕</span>
+          <span className="bg-white/20 rounded-2xl px-5 py-3 text-center">🥛</span>
+          <span className="bg-white/20 rounded-2xl px-5 py-3 text-center">🍞</span>
         </div>
       </section>
 
