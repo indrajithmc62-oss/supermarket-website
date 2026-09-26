@@ -70,7 +70,18 @@ body {
 
 .product-band {
   position: relative;
-  padding: 22px 0;
+  padding: 0;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .product-icon {

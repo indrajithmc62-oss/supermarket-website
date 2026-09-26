@@ -24,6 +24,7 @@ const bands = {
 function ProductCard({ product }) {
   const { addToCart } = useCart();
   const [justAdded, setJustAdded] = useState(false);
+  const [imgFailed, setImgFailed] = useState(false);
 
   const handleAdd = () => {
     addToCart(product);
@@ -32,14 +33,24 @@ function ProductCard({ product }) {
   };
 
   const lowStock = product.stock > 0 && product.stock <= 5;
+  const hasImage = product.image && !imgFailed;
 
   return (
     <div className="product-card">
       <div
         className="product-band"
-        style={{ background: bands[product.category] || "#eee" }}
+        style={{ background: hasImage ? "#f2f2f2" : bands[product.category] || "#eee" }}
       >
-        <span className="product-icon">{icons[product.category] || "🛍️"}</span>
+        {hasImage ? (
+          <img
+            src={product.image}
+            alt={product.name}
+            className="product-photo"
+            onError={() => setImgFailed(true)}
+          />
+        ) : (
+          <span className="product-icon">{icons[product.category] || "🛍️"}</span>
+        )}
         {lowStock && <span className="badge badge-low">Only {product.stock} left</span>}
         {product.stock === 0 && <span className="badge badge-out">Out of stock</span>}
       </div>
